@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b2545">
+<title>Sử Việt Quest – Giải mã Bạch Đằng Giang</title>
+<style>
+:root{--navy:#0b2545;--blue:#164e78;--river:#287da1;--gold:#d7ad59;--cream:#fffaf0;--ink:#182b3b;--muted:#617386;--line:#dce5eb;--green:#207653;--red:#a83c3c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#eaf3f7 0%,#f7f8f5 48%,#f3eee2 100%);min-height:100vh}
+button{font:inherit;cursor:pointer}.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(7,28,53,.98),rgba(18,77,111,.93)),radial-gradient(circle at 80% 20%,#3c91b4,transparent 35%);color:white;padding:34px 20px 42px;border-bottom:4px solid var(--gold)}
+.hero:before,.hero:after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(255,255,255,.13);border-radius:50%;width:420px;height:420px;right:-130px;top:-240px}.hero:after{width:310px;height:310px;right:-65px;top:-185px}
+.hero-inner{max-width:980px;margin:auto;position:relative;z-index:1}.eyebrow{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:#f2d99e;font-weight:800}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,5vw,3.65rem);line-height:1.04;margin:12px 0 10px;letter-spacing:.01em}.hero p{color:#d9e8f1;max-width:650px;line-height:1.65;margin:0;font-size:1.02rem}.hero-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.tag{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;color:#f7e8bf;font-size:.82rem;background:rgba(255,255,255,.06)}
+main{max-width:980px;margin:-18px auto 50px;padding:0 18px;position:relative;z-index:2}.panel{background:rgba(255,255,255,.96);border:1px solid rgba(11,37,69,.08);border-radius:20px;box-shadow:0 16px 42px rgba(13,48,72,.1);padding:clamp(20px,4vw,36px)}
+.start-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.section-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.15em;color:var(--river);font-weight:800}.panel h2{font-family:Georgia,"Times New Roman",serif;color:var(--navy);font-size:1.8rem;margin:8px 0 12px}.lead{color:var(--muted);line-height:1.75;margin:0 0 22px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 24px}.fact{background:#f0f6f8;border-radius:13px;padding:14px 12px}.fact strong{display:block;font-size:1.35rem;color:var(--navy)}.fact span{font-size:.78rem;color:var(--muted)}.art-card{min-height:245px;border-radius:16px;padding:22px;color:white;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(8,31,56,.02),rgba(8,31,56,.9)),linear-gradient(135deg,#6eb0c5,#164e78 55%,#0b2545);position:relative;overflow:hidden}.art-card:before{content:"";position:absolute;left:-10%;right:-10%;height:120px;bottom:65px;border-radius:50%;border-top:2px solid rgba(255,255,255,.55);transform:rotate(-8deg);box-shadow:0 -15px 0 -13px rgba(255,255,255,.35),0 -32px 0 -30px rgba(255,255,255,.3)}.stakes{position:absolute;bottom:46px;left:12%;right:12%;height:84px;display:flex;justify-content:space-around;align-items:flex-end}.stakes i{display:block;width:7px;height:70px;background:linear-gradient(90deg,#7b4c2c,#d0a16b,#704328);border-radius:3px 3px 0 0;transform:rotate(3deg);box-shadow:3px 0 0 rgba(0,0,0,.1)}.art-title{position:relative;z-index:1;font-family:Georgia,serif;font-size:1.35rem}.art-caption{position:relative;z-index:1;color:#dceaf1;font-size:.82rem;margin-top:5px}
+.btn{border:0;border-radius:12px;padding:13px 20px;font-weight:800;transition:transform .15s,background .15s;display:inline-flex;align-items:center;justify-content:center;gap:9px}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--gold);color:#172b3c;box-shadow:0 6px 16px rgba(180,132,43,.2)}.btn-primary:hover{background:#e5c374}.btn-secondary{background:#eaf1f5;color:var(--navy)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.hidden{display:none!important}.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px;color:var(--muted);font-size:.88rem;font-weight:700}.progress-wrap{height:8px;border-radius:99px;background:#e7edf0;overflow:hidden;margin-bottom:25px}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--river),var(--gold));border-radius:99px;transition:width .3s}.source-label{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--river);font-weight:800;margin-bottom:8px}.source-title{font-size:.9rem;color:var(--muted);line-height:1.5;margin-bottom:8px}.source-link{color:#176c95;text-decoration:none;border-bottom:1px solid #a8d1e1}.source-link:hover{color:var(--navy)}.question{font-size:clamp(1.2rem,3vw,1.65rem);line-height:1.45;font-weight:800;color:var(--navy);margin:10px 0 22px}.options{display:grid;gap:11px}.option{width:100%;text-align:left;display:flex;gap:13px;align-items:flex-start;padding:15px 16px;border:1.5px solid var(--line);border-radius:13px;background:white;color:var(--ink);line-height:1.5;transition:border .15s,background .15s}.option:hover{border-color:#6aa5bf;background:#f7fbfd}.option .letter{width:29px;height:29px;flex:0 0 29px;border-radius:9px;display:grid;place-items:center;background:#edf3f6;color:var(--navy);font-weight:800;font-size:.84rem}.option.selected{border-color:var(--river);background:#edf7fb;box-shadow:0 0 0 2px rgba(40,125,161,.1)}.option.correct{border-color:var(--green);background:#eaf7f0}.option.wrong{border-color:var(--red);background:#fff0ef}.option.correct .letter{background:var(--green);color:white}.option.wrong .letter{background:var(--red);color:white}.feedback{margin-top:18px;padding:15px 16px;border-radius:12px;line-height:1.6}.feedback.good{background:#eaf7f0;color:#145a3e}.feedback.bad{background:#fff0ef;color:#8d2e2e}.feedback strong{display:block;margin-bottom:3px}.quiz-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px}.hint{font-size:.8rem;color:var(--muted);line-height:1.5}.result{text-align:center}.result-emblem{width:82px;height:82px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:#f7edcf;color:#8a641c;font-size:2.1rem;border:1px solid #ead69d}.score{font-family:Georgia,serif;font-size:clamp(3.4rem,9vw,5.2rem);color:var(--navy);font-weight:800;line-height:1}.score span{font-size:1.5rem;color:var(--muted)}.result-sub{color:var(--muted);line-height:1.6}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:500px;margin:24px auto}.result-stat{background:#f1f6f8;border-radius:12px;padding:15px}.result-stat strong{display:block;font-size:1.45rem;color:var(--navy)}.result-stat span{font-size:.8rem;color:var(--muted)}.result-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.source-list{display:grid;gap:10px;margin-top:18px}.source-item{padding:13px 15px;background:#f5f8f9;border-radius:12px;display:flex;gap:12px;align-items:flex-start}.source-item b{color:var(--navy);font-size:.9rem}.source-item a{display:block;color:#176c95;font-size:.8rem;line-height:1.5;overflow-wrap:anywhere;margin-top:3px}.footer{text-align:center;color:#738494;font-size:.78rem;padding:0 20px 30px;line-height:1.6}
+@media(max-width:700px){.start-layout{grid-template-columns:1fr}.art-card{min-height:190px}.facts{grid-template-columns:repeat(3,1fr)}.quiz-actions{align-items:stretch}.quiz-actions .btn{flex:1}.hint{max-width:120px}.hero{padding-top:28px}.panel{border-radius:16px}}
+@media(max-width:420px){.facts{gap:6px}.fact{padding:11px 8px}.fact strong{font-size:1.15rem}.fact span{font-size:.7rem}.quiz-top{font-size:.8rem}.option{padding:12px}.quiz-actions{flex-wrap:wrap}.hint{max-width:none;width:100%;order:3;text-align:center}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Hành trình khám phá lịch sử Việt Nam</div>
+    <h1>SỬ VIỆT QUEST</h1>
+    <p>Giải mã Bạch Đằng Giang — thử thách kiến thức về những trận thủy chiến vang danh, mưu lược quân sự và ký ức lịch sử bên dòng sông huyền thoại.</p>
+    <div class="hero-tags"><span class="tag">✦ 20 câu hỏi</span><span class="tag">✦ 4 nguồn tư liệu</span><span class="tag">✦ Trắc nghiệm tương tác</span></div>
+  </div>
+</header>
+<main>
+  <section id="startScreen" class="panel">
+    <div class="start-layout">
+      <div>
+        <div class="section-kicker">Bắt đầu thử thách</div>
+        <h2>Dòng sông lưu dấu chiến công</h2>
+        <p class="lead">Mỗi lượt chơi gồm 20 câu hỏi được xáo trộn ngẫu nhiên. Đọc nguồn tư liệu đi kèm, chọn đáp án và xem phản hồi ngay sau mỗi câu. Hãy vận dụng kiến thức để mở khóa kết quả của bạn!</p>
+        <div class="facts">
+          <div class="fact"><strong>20</strong><span>Câu hỏi</span></div>
+          <div class="fact"><strong>1 điểm</strong><span>Mỗi câu đúng</span></div>
+          <div class="fact"><strong>4</strong><span>Nguồn tham khảo</span></div>
+        </div>
+        <button class="btn btn-primary" id="startBtn">Bắt đầu hành trình <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="art-card" aria-label="Minh họa dòng sông và bãi cọc Bạch Đằng">
+        <div class="stakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="art-title">Bạch Đằng Giang</div><div class="art-caption">Mưu lược — Địa thế — Hào khí Việt Nam</div>
+      </div>
+    </div>
+    <div style="margin-top:28px;border-top:1px solid var(--line);padding-top:20px">
+      <div class="section-kicker">Nguồn tư liệu sử dụng</div>
+      <div class="source-list">
+        <div class="source-item"><span>01</span><div><b>“Ngô Quyền đóng cọc Bạch Đằng” — Phùng Văn Khai</b><a href="https://vanhocsaigon.com/truyen-ngan-phung-van-khai-ngo-quyen-dong-coc-bach-dang/" target="_blank" rel="noopener">vanhocsaigon.com</a></div></div>
+        <div class="source-item"><span>02</span><div><b>“Huyền thoại Bạch Đằng Giang – Bài cuối: Dọc miền ký ức”</b><a href="https://tienphong.vn/huyen-thoai-bach-dang-giang-bai-cuoi-doc-mien-ky-uc-post952949.tpo" target="_blank" rel="noopener">tienphong.vn</a></div></div>
+        <div class="source-item"><span>03</span><div><b>“Chân dung ‘đạo diễn’ chính trận địa cọc ngầm lừng danh trên sông Bạch Đằng”</b><a href="https://soha.vn/chan-dung-dao-dien-chinh-tran-dia-coc-ngam-lung-danh-tren-song-bach-dang-20161117084035782.htm" target="_blank" rel="noopener">soha.vn</a></div></div>
+        <div class="source-item"><span>04</span><div><b>“Trận Bạch Đằng năm 938: Ai chọn địa điểm, ai hiến kế ‘đóng cọc nhọn’?”</b><a href="https://vanvn.vn/tran-bach-dang-nam-938-ai-chon-dia-diem-ai-hien-ke-dong-coc-nhon/" target="_blank" rel="noopener">vanvn.vn</a></div></div>
+      </div>
+      <p class="hint" style="margin-top:14px">Lưu ý: Một số câu hỏi về chi tiết trong truyện/ký ức địa phương cần được đối chiếu trực tiếp với bài gốc trước khi dùng trong bài kiểm tra chính thức.</p>
+    </div>
+  </section>
+
+  <section id="quizScreen" class="panel hidden" aria-live="polite">
+    <div class="quiz-top"><span id="questionCounter">Câu 1 / 20</span><span id="scoreCounter">Điểm: 0</span></div>
+    <div class="progress-wrap"><div id="progressBar" class="progress-bar"></div></div>
+    <div class="source-label">Nguồn tư liệu của câu hỏi</div>
+    <div class="source-title" id="sourceTitle"></div>
+    <div class="source-title"><a class="source-link" id="sourceLink" href="#" target="_blank" rel="noopener">Đọc bài gốc ↗</a></div>
+    <h2 class="question" id="questionText"></h2>
+    <div class="options" id="options"></div>
+    <div id="feedback" class="feedback hidden"></div>
+    <div class="quiz-actions">
+      <span class="hint" id="actionHint">Chọn một đáp án để tiếp tục.</span>
+      <button class="btn btn-primary" id="checkBtn" disabled>Kiểm tra đáp án</button>
+      <button class="btn btn-primary hidden" id="nextBtn">Câu tiếp theo →</button>
+    </div>
+  </section>
+
+  <section id="resultScreen" class="panel hidden">
+    <div class="result">
+      <div class="result-emblem" id="resultEmblem">✦</div>
+      <div class="section-kicker">Hoàn thành thử thách</div>
+      <h2 id="resultTitle">Bạn đã hoàn thành hành trình!</h2>
+      <div class="score"><span id="finalScore">0</span><span> / 20</span></div>
+      <p class="result-sub" id="resultMessage"></p>
+      <div class="result-grid">
+        <div class="result-stat"><strong id="correctCount">0</strong><span>Câu đúng</span></div>
+        <div class="result-stat"><strong id="wrongCount">0</strong><span>Câu chưa đúng</span></div>
+        <div class="result-stat"><strong id="percentCount">0%</strong><span>Tỉ lệ đúng</span></div>
+      </div>
+      <div class="result-actions"><button class="btn btn-primary" id="restartBtn">↻ Chơi lại</button><button class="btn btn-secondary" id="reviewBtn">Xem lại đáp án</button></div>
+    </div>
+    <div id="reviewArea" class="hidden" style="margin-top:30px;border-top:1px solid var(--line);padding-top:22px;text-align:left">
+      <div class="section-kicker">Ôn tập sau thử thách</div><h2 style="font-size:1.45rem">Đáp án và nguồn tham khảo</h2><div id="reviewList" class="source-list"></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">SỬ VIỆT QUEST · Nội dung phục vụ học tập và ôn luyện lịch sử.<br>Hãy đọc các nguồn tham khảo để kiểm chứng những chi tiết còn cần đối chiếu.</footer>
+<script>
+const sources = {
+  s1:{title:"“Ngô Quyền đóng cọc Bạch Đằng” — Phùng Văn Khai",url:"https://vanhocsaigon.com/truyen-ngan-phung-van-khai-ngo-quyen-dong-coc-bach-dang/"},
+  s2:{title:"“Huyền thoại Bạch Đằng Giang – Bài cuối: Dọc miền ký ức” — Tiền Phong",url:"https://tienphong.vn/huyen-thoai-bach-dang-giang-bai-cuoi-doc-mien-ky-uc-post952949.tpo"},
+  s3:{title:"“Chân dung ‘đạo diễn’ chính trận địa cọc ngầm lừng danh trên sông Bạch Đằng” — Soha",url:"https://soha.vn/chan-dung-dao-dien-chinh-tran-dia-coc-ngam-lung-danh-tren-song-bach-dang-20161117084035782.htm"},
+  s4:{title:"“Trận Bạch Đằng năm 938: Ai chọn địa điểm, ai hiến kế ‘đóng cọc nhọn’?” — Văn nghệ Việt Nam",url:"https://vanvn.vn/tran-bach-dang-nam-938-ai-chon-dia-diem-ai-hien-ke-dong-coc-nhon/"}
+};
+// correct stores the answer text, so answer shuffling never changes correctness.
+const questions = [
+ {s:"s1",q:"Trong truyện “Ngô Quyền đóng cọc Bạch Đằng”, Ngô Quyền cùng vị tướng nào đi khảo sát sông Bạch Đằng?",o:["Đỗ Cảnh Thạc","Phạm Bạch Hổ","Đặng An","Lưu Hoằng Tháo"],a:"Phạm Bạch Hổ",e:"Câu hỏi dựa trên chi tiết khảo sát trong truyện của Phùng Văn Khai."},
+ {s:"s1",q:"Phạm Bạch Hổ dùng phương tiện gì để khảo sát các bãi sú vẹt?",o:["Thuyền nhỏ","Voi chiến","Ngựa chiến","Xe kéo"],a:"Thuyền nhỏ",e:"Đối chiếu chi tiết này với văn bản truyện gốc để xác nhận."},
+ {s:"s1",q:"Theo câu chuyện, cách nào được đề xuất để đưa những cọc lớn xuống lòng sông?",o:["Dùng dây buộc và thang tre đưa cọc xuống rồi dựng thẳng","Dùng voi kéo cọc xuống sông","Thả cọc trôi theo dòng nước","Chôn cọc trên bãi cát"],a:"Dùng dây buộc và thang tre đưa cọc xuống rồi dựng thẳng",e:"Đáp án dự kiến theo nội dung câu hỏi đã biên soạn; cần kiểm tra nguyên văn truyện."},
+ {s:"s1",q:"Theo lời Ngô Quyền trong truyện, những ai cùng góp công xây dựng trận địa cọc?",o:["Chỉ các tướng lĩnh","Chỉ binh lính","Các lão chài cùng lực lượng tướng sĩ, binh lính","Các thương nhân trong vùng"],a:"Các lão chài cùng lực lượng tướng sĩ, binh lính",e:"Đáp án dự kiến; hãy kiểm tra bài gốc để xác nhận đúng chi tiết."},
+ {s:"s1",q:"Kết cục của quân Lưu Hoằng Tháo trong trận Bạch Đằng được kể như thế nào?",o:["Giành chiến thắng","Bị đánh bại ở Bạch Đằng","Rút lui và cầu hòa","Đóng quân lâu dài bên sông"],a:"Bị đánh bại ở Bạch Đằng",e:"Chiến thắng Bạch Đằng năm 938 gắn với việc đánh bại quân Nam Hán."},
+ {s:"s2",q:"Theo bài viết về ký ức Bạch Đằng Giang, Làng Rừng còn được gọi bằng tên nào?",o:["Trại An Hưng","Phong Châu","Ái Châu","Cổ Loa"],a:"Trại An Hưng",e:"Đáp án dự kiến, cần đối chiếu bài Tiền Phong trước khi sử dụng chính thức."},
+ {s:"s2",q:"Trong truyền thuyết được nhắc đến, ai đã mách kế cho Trần Hưng Đạo?",o:["Một nữ tướng","Bà hàng nước ven sông","Một thương nhân","Một sứ giả"],a:"Bà hàng nước ven sông",e:"Đây là chi tiết truyền thuyết; nên phân biệt với tư liệu lịch sử đã được kiểm chứng."},
+ {s:"s2",q:"Theo truyền thuyết về Bạch Đằng Giang, bà hàng nước đã chỉ dẫn cho Trần Hưng Đạo về con nước và lòng sông.",o:["Đúng","Sai"],a:"Đúng",e:"Đáp án dự kiến theo truyền thuyết được nêu trong bài; hãy kiểm tra nội dung gốc."},
+ {s:"s2",q:"Theo truyền thuyết, sau chiến thắng, Trần Hưng Đạo đã làm gì để tưởng nhớ người phụ nữ hàng nước?",o:["Cho lập bến cảng","Lập đền thờ và xin sắc phong danh hiệu Vua Bà","Đóng một chiến thuyền","Mở chợ bên sông"],a:"Lập đền thờ và xin sắc phong danh hiệu Vua Bà",e:"Đáp án dự kiến theo câu chuyện dân gian; cần kiểm tra bài gốc."},
+ {s:"s2",q:"Có thể nói người dân Làng Rừng chỉ làm nông, hoàn toàn không giúp sức trong chiến trận?",o:["Đúng","Sai"],a:"Sai",e:"Đáp án dự kiến theo nội dung bài viết; cần đối chiếu bài gốc."},
+ {s:"s3",q:"Mục đích chính của trận địa cọc ngầm trên sông Bạch Đằng là gì?",o:["Làm nơi neo đậu thuyền buôn","Dụ thuyền địch vào khu vực cọc để tiêu diệt","Ngăn ngư dân đánh cá","Đánh dấu ranh giới làng"],a:"Dụ thuyền địch vào khu vực cọc để tiêu diệt",e:"Trận địa cọc phát huy tác dụng khi kết hợp với địa hình và thủy triều."},
+ {s:"s3",q:"Khi nước triều rút, thuyền địch có thể mắc cạn hoặc bị cọc nhọn đâm thủng.",o:["Đúng","Sai"],a:"Đúng",e:"Hiệu quả của bãi cọc gắn với việc tính toán mực nước và thời điểm giao chiến."},
+ {s:"s3",q:"Chiến thuật Bạch Đằng kết hợp những yếu tố nào?",o:["Bãi cọc, thủy triều và cách đánh phối hợp","Chỉ dùng cung tên","Chỉ dựa vào số lượng thuyền","Chỉ sử dụng bộ binh trên bờ"],a:"Bãi cọc, thủy triều và cách đánh phối hợp",e:"Sự phối hợp giữa địa thế, thủy triều và cách tổ chức trận đánh là điểm then chốt."},
+ {s:"s3",q:"Vì sao việc khảo sát địa hình và thủy triều có ý nghĩa quan trọng trong kế hoạch Bạch Đằng?",o:["Giúp lựa chọn vị trí và thời điểm đánh phù hợp","Để chờ thuyền buôn đi qua","Vì không có thuyền nhỏ","Vì thủy triều không thay đổi"],a:"Giúp lựa chọn vị trí và thời điểm đánh phù hợp",e:"Nắm địa hình và quy luật thủy triều giúp tận dụng lợi thế tự nhiên."},
+ {s:"s3",q:"Chiến thắng Bạch Đằng chỉ dựa vào sức mạnh quân số, không cần mưu lược.",o:["Đúng","Sai"],a:"Sai",e:"Trận đánh thường được nhắc đến như ví dụ tiêu biểu về nghệ thuật quân sự và tận dụng địa hình."},
+ {s:"s4",q:"Theo bài viết về trận Bạch Đằng năm 938, ai được nêu là người hiến kế chọn địa điểm Bạch Đằng?",o:["Kiều Công Hãn","Đỗ Cảnh Thạc","Phạm Bạch Hổ","Lưu Hoằng Tháo"],a:"Kiều Công Hãn",e:"Đáp án dự kiến theo bài Văn nghệ Việt Nam; cần kiểm tra trực tiếp bài gốc."},
+ {s:"s4",q:"Ai được bài viết nêu là người hiến kế dùng cọc nhọn và thuyền nhẹ giả lui để nhử địch?",o:["Nguyễn Tất Tố","Ngô Xương Ngập","Đinh Công Trứ","Kiều Công Chuẩn"],a:"Nguyễn Tất Tố",e:"Đáp án dự kiến theo bài viết; cần kiểm chứng trước khi dùng làm đáp án chính thức."},
+ {s:"s4",q:"Theo bài viết, Ngô Quyền giao Dương Tam Kha tổ chức bố trí trận địa cọc?",o:["Đúng","Sai"],a:"Đúng",e:"Đáp án dự kiến; hãy đối chiếu bài gốc vì đây là chi tiết nhân vật cần xác minh."},
+ {s:"s4",q:"Nguyễn Tất Tố tình nguyện thực hiện nhiệm vụ nào trong kế hoạch nhử quân địch?",o:["Đóng thuyền vận tải","Dùng thuyền nhẹ khiêu chiến, dụ quân địch","Đưa viện binh qua biên giới","Xây thành trên núi"],a:"Dùng thuyền nhẹ khiêu chiến, dụ quân địch",e:"Đáp án dự kiến theo bài viết; cần đối chiếu nguồn gốc."},
+ {s:"s4",q:"Chiến thắng Bạch Đằng năm 938 góp phần chấm dứt thời kỳ Bắc thuộc kéo dài và mở ra thời kỳ tự chủ lâu dài cho dân tộc.",o:["Đúng","Sai"],a:"Đúng",e:"Chiến thắng năm 938 là dấu mốc quan trọng trong tiến trình giành quyền tự chủ của người Việt."}
+];
+let deck=[], index=0, score=0, selected=null, checked=false, userAnswers=[];
+const $=id=>document.getElementById(id);
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+function startQuiz(){
+ deck=shuffle(questions.map(q=>({...q, o:shuffle([...q.o])})));
+ index=0;score=0;selected=null;checked=false;userAnswers=[];
+ $("startScreen").classList.add("hidden");$("resultScreen").classList.add("hidden");$("quizScreen").classList.remove("hidden");
+ renderQuestion();window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderQuestion(){
+ const q=deck[index];selected=null;checked=false;
+ $("questionCounter").textContent=`Câu ${index+1} / ${deck.length}`;
+ $("scoreCounter").textContent=`Điểm: ${score}`;
+ $("progressBar").style.width=`${(index/deck.length)*100}%`;
+ $("sourceTitle").textContent=q.sourceTitle||sources[q.s].title;
+ $("sourceLink").href=sources[q.s].url;
+ $("questionText").textContent=q.q;
+ $("options").innerHTML="";
+ q.o.forEach((answer,i)=>{
+   const btn=document.createElement("button");btn.type="button";btn.className="option";
+   btn.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span></span>`;
+   btn.lastElementChild.textContent=answer;
+   btn.addEventListener("click",()=>chooseAnswer(answer,btn));
+   $("options").appendChild(btn);
+ });
+ $("feedback").className="feedback hidden";$("feedback").textContent="";
+ $("checkBtn").classList.remove("hidden");$("checkBtn").disabled=true;
+ $("nextBtn").classList.add("hidden");
+ $("actionHint").textContent="Chọn một đáp án để tiếp tục.";
+}
+function chooseAnswer(answer,btn){
+ if(checked)return;selected=answer;
+ [...$("options").children].forEach(el=>el.classList.remove("selected"));
+ btn.classList.add("selected");$("checkBtn").disabled=false;
+}
+function checkAnswer(){
+ if(selected===null||checked)return;checked=true;
+ const q=deck[index],isCorrect=selected===q.a;
+ if(isCorrect)score++;
+ userAnswers.push({q,selected,isCorrect});
+ [...$("options").children].forEach(el=>{
+   const text=el.lastElementChild.textContent;
+   el.disabled=true;
+   if(text===q.a)el.classList.add("correct");
+   if(text===selected&&!isCorrect)el.classList.add("wrong");
+ });
+ $("scoreCounter").textContent=`Điểm: ${score}`;
+ $("feedback").className=`feedback ${isCorrect?"good":"bad"}`;
+ $("feedback").innerHTML=`<strong>${isCorrect?"✓ Chính xác!":"✕ Chưa chính xác."}</strong>`;
+ const detail=document.createElement("div");detail.textContent=(isCorrect?"Bạn đã chọn đúng. ":"Đáp án đúng: "+q.a+". ")+(q.e||"");$("feedback").appendChild(detail);
+ $("checkBtn").classList.add("hidden");$("nextBtn").classList.remove("hidden");
+ $("nextBtn").textContent=index===deck.length-1?"Xem kết quả →":"Câu tiếp theo →";
+ $("actionHint").textContent="Đáp án đã được ghi nhận.";
+ $("progressBar").style.width=`${((index+1)/deck.length)*100}%`;
+}
+function nextQuestion(){if(!checked)return;if(index<deck.length-1){index++;renderQuestion();}else showResult();}
+function showResult(){
+ $("quizScreen").classList.add("hidden");$("resultScreen").classList.remove("hidden");
+ const pct=Math.round(score/deck.length*100);
+ $("finalScore").textContent=score;$("correctCount").textContent=score;$("wrongCount").textContent=deck.length-score;$("percentCount").textContent=pct+"%";
+ let title,msg,emblem;
+ if(score>=18){title="Nhà giải mã xuất sắc!";msg="Bạn đã thể hiện kiến thức rất vững về Bạch Đằng Giang. Hãy tiếp tục khám phá những câu chuyện lịch sử khác.";emblem="★";}
+ else if(score>=14){title="Dấu ấn rất đáng tự hào!";msg="Bạn nắm khá chắc nhiều kiến thức quan trọng. Đọc lại những câu chưa đúng để củng cố hiểu biết.";emblem="✦";}
+ else if(score>=10){title="Bạn đang tiến bộ!";msg="Bạn đã có nền tảng ban đầu. Hãy quay lại các nguồn tư liệu và thử sức thêm một lượt nữa.";emblem="◈";}
+ else{title="Bắt đầu từ những dấu mốc!";msg="Đừng nản lòng — hãy đọc các bài tham khảo rồi chơi lại để hiểu rõ hơn về trận Bạch Đằng.";emblem="⌁";}
+ $("resultTitle").textContent=title;$("resultMessage").textContent=msg;$("resultEmblem").textContent=emblem;
+ $("progressBar").style.width="100%";buildReview();window.scrollTo({top:0,behavior:"smooth"});
+}
+function buildReview(){
+ $("reviewList").innerHTML="";
+ userAnswers.forEach((entry,i)=>{
+  const div=document.createElement("div");div.className="source-item";
+  const num=document.createElement("span");num.textContent=String(i+1).padStart(2,"0");
+  const body=document.createElement("div");const b=document.createElement("b");
+  b.textContent=(entry.isCorrect?"✓ ":"• ")+entry.q.q;
+  const p=document.createElement("p");p.style.cssText="margin:7px 0 4px;font-size:.84rem;line-height:1.5;color:var(--muted)";
+  p.textContent="Đáp án: "+entry.q.a+(entry.isCorrect?"":" · Bạn chọn: "+entry.selected);
+  const a=document.createElement("a");a.href=sources[entry.q.s].url;a.target="_blank";a.rel="noopener";a.textContent="Nguồn: "+sources[entry.q.s].title;
+  body.append(b,p,a);div.append(num,body);$("reviewList").appendChild(div);
+ });
+}
+$("startBtn").addEventListener("click",startQuiz);
+$("checkBtn").addEventListener("click",checkAnswer);
+$("nextBtn").addEventListener("click",nextQuestion);
+$("restartBtn").addEventListener("click",startQuiz);
+$("reviewBtn").addEventListener("click",()=>{$("reviewArea").classList.toggle("hidden");$("reviewBtn").textContent=$("reviewArea").classList.contains("hidden")?"Xem lại đáp án":"Ẩn phần ôn tập";});
+</script>
+</body>
+</html>
